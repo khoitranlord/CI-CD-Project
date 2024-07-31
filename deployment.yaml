@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myjavaapp
-        image: khoitran/javaapp:latest
+        image: khoitranlord/javaapp:latest
         ports:
         - containerPort: 8080
 
