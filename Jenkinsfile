@@ -124,8 +124,8 @@ pipeline {
             steps{
                script{
                   sh """
-                  aws configure set aws_access_key_id "$ACCESS_KEY"
-                  aws configure set aws_secret_access_key "$SECRET_KEY"
+                  export AWS_ACCESS_KEY_ID=${ACCESS_KEY}
+                  export AWS_SECRET_ACCESS_KEY=${SECRET_KEY}
                   aws configure set region "${params.Region}"
                   aws eks --region ${params.Region} update-kubeconfig --name ${params.cluster}
                   """
